@@ -22,8 +22,7 @@ function setupModeBtns(){
             modeBtn[0].classList.remove("selected");
             modeBtn[1].classList.remove("selected");
             this.classList.add("selected");
-            this.textContent === "Easy" ? numSquares = 3:
-            numSquares = 6;
+            this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
             reset();
         });
     }
@@ -81,6 +80,7 @@ resetBtn.addEventListener("click", function(){
 function  reset(){
     colors = generateRandmonColors(numSquares);
     pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
     resetBtn.textContent = "New Colors";
     messageDisplay.textContent = "";
     for (let i = 0; i < squares.length; i++){
